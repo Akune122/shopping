@@ -8,8 +8,6 @@ public class TVA
     }
 
     
-
-
     public double getPourcent()
     {
         return this.pourcentage;

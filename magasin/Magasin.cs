@@ -59,7 +59,6 @@ static void Main(string[] args)
         Caddie.ajoutProd(Pomme);
         Caddie.ajoutProd(Voiture);
         Caddie.ajoutProd(iPad);
-        Console.WriteLine(Caddie.getChar());
         Console.WriteLine(Caddie.total());
 }
 
