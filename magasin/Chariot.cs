@@ -5,19 +5,12 @@ public class Chariot
 {
     private Produit[] produits = new Produit[100];
 
-    public  Produit[] getChar()
+    public void getChar()
         {
-        for (int i=0;i<this.produits.Length;i++)
+        foreach (Produit prod in this.produits)
         {
-            if (this.produits[i] == null)
-            {
-                continue;
-            }
-            else {
-                Console.WriteLine(this.produits[i].getNom());
-            }
+            Console.WriteLine(prod.getNom());
         }
-        return this.produits;
         }
 
     public void ajoutProd(Produit prod)
@@ -39,10 +32,13 @@ public class Chariot
     public double total()
     {
         double res=0;
-        int i;
-        for (i = 0; i < this.produits.Length; i++)
+        int i=0;
+        foreach (Produit prod in this.produits)
         {
-            res = res + this.produits[i].getTVA().getTTC(this.produits[i]);
+            if (prod != null)
+            {
+                res = res + prod.calcTTC();
+            }
         }
         return res;
     }

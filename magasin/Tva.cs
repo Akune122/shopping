@@ -13,10 +13,9 @@ public class TVA
         return this.pourcentage;
     }
 
-    public double getTTC(Produit Prod)
+    public double getTTC(double Prod)
     {
-        double ttc = Prod.getPrix()*(1+(0.01*pourcentage));
+        double ttc = Prod*(1+(0.01*this.pourcentage));
         return ttc;
     }
-
 }

@@ -31,6 +31,12 @@ public class Produit
         return this.tva;
         }
 
+    public double calcTTC()
+    {
+        double resultat = this.tva.getTTC(this.prix);
+        return resultat;
+    }
+
 
 
 static void Main(string[] args)
@@ -49,6 +55,12 @@ static void Main(string[] args)
         Produit	Voiture;
 		Voiture= new Produit("McLaren",15,Tva3);
 
+        Banane banane;
+        banane = new Banane("Banane",1,Tva1,2,3);
+
+        Ordinateur ordi;
+        ordi = new Ordinateur("Alienware",1800,Tva2);
+
         Produit	iPad;
 		iPad= new Produit("iPad",5,Tva2);
 
@@ -59,7 +71,11 @@ static void Main(string[] args)
         Caddie.ajoutProd(Pomme);
         Caddie.ajoutProd(Voiture);
         Caddie.ajoutProd(iPad);
+
+        Console.WriteLine(banane.getNom());
         Console.WriteLine(Caddie.total());
+        Console.WriteLine(banane.calcPoids());
+
 }
 
 }
