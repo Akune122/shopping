@@ -73,6 +73,7 @@ static void Main(string[] args)
         Caddie.ajoutProd(iPad);
 
         Console.WriteLine(banane.getNom());
+        Console.WriteLine(ordi.getNom());
         Console.WriteLine(Caddie.total());
         Console.WriteLine(banane.calcPoids());
 

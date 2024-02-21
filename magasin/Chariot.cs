@@ -32,7 +32,6 @@ public class Chariot
     public double total()
     {
         double res=0;
-        int i=0;
         foreach (Produit prod in this.produits)
         {
             if (prod != null)
